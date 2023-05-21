@@ -8,7 +8,6 @@
     "type": "git",
     "url": "git+https://github.com/q-mona/vite-plugin-pngmin.git"
   },
-  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
