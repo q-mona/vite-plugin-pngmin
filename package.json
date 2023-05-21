@@ -1,0 +1,33 @@
+{
+  "name": "vite-plugin-pngmin",
+  "version": "1.0.0",
+  "description": "A vite plugin for compressing png images",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "imagemin"
+  ],
+  "author": "q-mona",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1"
+  },
+  "dependencies": {
+    "execa": "^7.1.1"
+  }
+}
