@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const execa = require('execa');
+const url = require('url');
 
 function _interopNamespaceCompat(e) {
     if (e && typeof e === 'object' && 'default' in e) return e;
@@ -19,7 +20,9 @@ function _interopNamespaceCompat(e) {
 const fs__namespace = /*#__PURE__*/_interopNamespaceCompat(fs);
 const path__namespace = /*#__PURE__*/_interopNamespaceCompat(path);
 
-const pngquant = path__namespace.join(__dirname, "exe", "pngquant.exe");
+const ESFilename = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href)));
+const ESDirname = path__namespace.dirname(ESFilename);
+const pngquant = path__namespace.join(ESDirname, "exe", "pngquant.exe");
 const b64Reg = /^export default (\"data:image\/png;base64,[A-Za-z0-9+/=]*\")$/;
 async function compress(imgBuffer, imgPath) {
   let buffer = imgBuffer;

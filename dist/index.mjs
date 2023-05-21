@@ -1,8 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { execa } from 'execa';
+import { fileURLToPath } from 'url';
 
-const pngquant = path.join(__dirname, "exe", "pngquant.exe");
+const ESFilename = fileURLToPath(import.meta.url);
+const ESDirname = path.dirname(ESFilename);
+const pngquant = path.join(ESDirname, "exe", "pngquant.exe");
 const b64Reg = /^export default (\"data:image\/png;base64,[A-Za-z0-9+/=]*\")$/;
 async function compress(imgBuffer, imgPath) {
   let buffer = imgBuffer;
