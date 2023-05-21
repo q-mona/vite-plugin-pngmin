@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { execa } from 'execa';
-import { createUnplugin } from 'unplugin';
 
 const pngquant = path.join(__dirname, "exe", "pngquant.exe");
 const b64Reg = /^export default (\"data:image\/png;base64,[A-Za-z0-9+/=]*\")$/;
@@ -20,7 +19,7 @@ async function compress(imgBuffer, imgPath) {
     return buffer;
   }
 }
-const pngmin = createUnplugin(() => {
+function pngmin() {
   let outDir, publicDir;
   return {
     name: "vite:pngmin",
@@ -84,7 +83,6 @@ const pngmin = createUnplugin(() => {
       await Promise.all(handles);
     }
   };
-});
-const index = pngmin.vite;
+}
 
-export { index as default };
+export { pngmin as default };

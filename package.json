@@ -1,7 +1,13 @@
 {
   "name": "vite-plugin-pngmin",
+  "author": "q-mona",
   "version": "1.0.0",
   "description": "A vite plugin for compressing png images",
+  "homepage": "https://github.com/q-mona/vite-plugin-pngmin/tree/main",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/q-mona/vite-plugin-pngmin.git"
+  },
   "type": "module",
   "exports": {
     ".": {
@@ -12,6 +18,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild"
   },
@@ -20,7 +29,6 @@
     "plugin",
     "imagemin"
   ],
-  "author": "q-mona",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.2.1",

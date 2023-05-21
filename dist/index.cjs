@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const execa = require('execa');
-const unplugin = require('unplugin');
 
 function _interopNamespaceCompat(e) {
     if (e && typeof e === 'object' && 'default' in e) return e;
@@ -37,7 +36,7 @@ async function compress(imgBuffer, imgPath) {
     return buffer;
   }
 }
-const pngmin = unplugin.createUnplugin(() => {
+function pngmin() {
   let outDir, publicDir;
   return {
     name: "vite:pngmin",
@@ -101,7 +100,6 @@ const pngmin = unplugin.createUnplugin(() => {
       await Promise.all(handles);
     }
   };
-});
-const index = pngmin.vite;
+}
 
-module.exports = index;
+module.exports = pngmin;
