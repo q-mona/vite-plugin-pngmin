@@ -1,6 +1,6 @@
 # vite-plugin-pngmin
  A vite plugin for compressing png images.
-# Qiuck start
+# Qiuck Start
 ## Download
 ```
 npm i vite-plugin-pngmin -D
@@ -15,3 +15,6 @@ export default defineConfig({
     plugins: [imgmin()]
 })
 ```
+
+# Impeachment Detail
+[juejin](https://juejin.cn/post/7235485148417769532)
