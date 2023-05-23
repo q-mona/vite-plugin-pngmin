@@ -8,13 +8,13 @@ npm i vite-plugin-pngmin -D
 ## Usage
 ```
 import { defineConfig } from 'vite'
-import imgmin from 'vite-plugin-pngmin'
+import pngmin from 'vite-plugin-pngmin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [imgmin()]
+    plugins: [pngmin()]
 })
 ```
 
-# Impeachment Detail
+# Implement Detail
 [juejin](https://juejin.cn/post/7235485148417769532)
